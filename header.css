@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #f2f5f7;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  body{
+    overflow-x: hidden;
+   
+  }
+  #homepage{
+    background: url(./Rectangle\ 1\ copy\ 4.png);
+  }
+  nav{
+    height: 6rem;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+  }
+  
+  /*Styling logo*/
+  .logo{
+    padding:1vh 1vw;
+    text-align: center;
+  }
+  .logo img {
+    height: 3rem;
+    width: 8rem;
+   padding: 20px 20px 20px 20px;
+  }
+  
+  /*Styling Links*/
+  .nav-links{
+    display: flex;
+    list-style: none; 
+    width: 44vw;
+    margin-left: 45%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .nav-links li a{
+    text-decoration: none;
+    margin: 0 0.7vw;
+  }
+  .nav-links li {
+    position: relative;
+  }
+  .nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+  }
+  .nav-links li a:hover::before{
+    width: 80%;
+  }
+  
+  
+  /*Styling Hamburger Icon*/
+  .hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .hamburger{
+    display: none;
+  }
+  h1{
+    font-family: 'Cinzel', serif;
+    font-size:6vw;
+    color:aqua;
+    margin-left: 10%;
+    margin-top: 20%;
+  }
+  h2{
+    font-family: 'VT323', monospace;
+    font-size:3.5vw;
+    color: aqua;
+    margin-left: 10%;
+    margin-top: 2%;
+  
+  }
+  .content-right{
+    width: 60%;
+    height: 40%;
+  }
+  #main-content{
+    display: flex;
+  }
+  .img{
+    width:75%;
+    height:80%;
+    margin-left: 22%;
+    margin-top: 20%;
+  }
+  .video-player{
+  width: 0%;
+  height: 0vh;
+  position: absolute;
+  left:50%;
+  top:40%;
+  transform:translate(-50%,-70%);
+  transform-origin: center center;
+  }
+  video{
+  width:90%;
+  padding-top: 20px;
+  margin: auto;
+  display: block;
+  position: relative;
+  }
+  #close{
+  position: relative;
+  top:0px;
+  right: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  display: none;
+  }
+  .demo{
+    color:rgb(244, 241, 241);
+    width: 100px;
+    height: 50px;
+    background: url(./Rectangle\ 1\ copy\ 4.png);
+    border: 1px solid rgba(9, 0, 81, 0.92);
+    cursor: pointer;
+  }
+  .toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+  }
+  .toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+  }
+  .toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+  }
+  h3{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 14%;
+    margin-top: 5%;
+  }
+   /*popup form*/
+   form{
+    position: relative;
+    width:300px;
+    margin-left: 40%;
+  }
+  .form-container{
+  border-radius: 5px;
+    width:300px;
+    height:380px;
+    background:url(./Rectangle\ 844\ copy.png);
+    padding:10px 10px 10px 10px;
+    margin-left: 20%;
+    border: 1px solid rgb(245, 241, 241);
+    box-shadow: 2px 0 2px 0 rgb(163, 161, 161);
+  }
+  h3{
+    font-size: 25px;
+    color:#01080d;
+    font-weight: bolder;
+    text-align: center;
+  }
+  form label{
+   position: relative; 
+   display: block;
+   margin-right: 10%;
+  }
+  form input{
+    margin:5px 40px;
+    width:80%;
+    background:#b9b5b5;
+    color:#fff;
+    padding:6px;
+    border-radius: 6px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+  }
+  form input:hover{
+    cursor:pointer;
+    background-color:#b6e2f7 ;
+  }
+  .emailtext,
+  .passtext,
+  .lasttext{
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 35px;
+    font-style:italic;
+    padding:3px;
+    color: #01080d;
+    
+  }
+  label.valid.emailtext,
+  label.valid.passtext,
+  label.valid.lasttext{
+    color:#0d8d0d;
+  }
+  label.invalid.emailtext,
+  label.invalid.passtext,
+  label.invalid.lasttext{
+    color:#f00;
+  }
+  label.valid::before,
+  label.invalid::before{
+    content:"";
+    position: absolute;
+    width:24px;
+    height:24px;
+    top:10px;
+    right:5px;
+    z-index:100;
+  }
+  label.valid::before{
+    background: url(./check.jpeg)no-repeat center /cover;
+  }
+  label.invalid::before{
+    background: url(./error.jpeg)no-repeat center /cover;
+  }
+  .container{
+    width:100%;
+    height:5%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .btn{
+    margin-top: 27px;
+    padding: 8px 40px;
+    background: #b9b5b5;
+    border:0;
+    outline: none;
+    cursor:pointer;
+    font-size: 15px;
+    margin-left: 30%;
+    font-family:'Times New Roman', Times, serif;
+    font-weight:1000;
+    border-radius:5px;
+  
+  }
+  .btn:hover{
+    cursor: pointer;
+    background-color: #b6e2f7;
+  }
+  #btn2{
+    margin-top: 16px;
+    padding: 8px 44px;
+    background: #b9b5b5;
+    border:0;
+    outline: none;
+    cursor:pointer;
+    font-size: 15px;
+    margin-left: 30%;
+    font-family:'Times New Roman', Times, serif;
+    font-weight:1000;
+    border-radius:5px;
+  }
+  #btn2:hover{
+    cursor: pointer;
+    background-color: #b6e2f7;
+  }
+  .popup{
+    width:400px;
+    background: #fff;
+    border-radius: 6px;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    text-align: center;
+    padding:0 30px 30px;
+    color:#333;
+    visibility: hidden;
+    transition: transform 0.4s,top 0.4s;
+  }
+  .open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%)scale(1);
+  }
+  .popup img{
+    width:100px;
+    margin-top:-50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin:30px 0 10px;
+  }
+  .popup button{
+    width:100%;
+    margin-top: 50px;
+    padding:10px 0;
+    background: #6fd649;
+    color:#fff;
+    border:0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  }    

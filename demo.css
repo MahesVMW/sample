@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #f2f5f7;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  body{
+    overflow-x: hidden;
+    background: url(./Rectangle\ 1\ copy\ 4.png);
+  }
+  nav{
+    height: 6rem;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+  }
+  
+  /*Styling logo*/
+  .logo{
+    padding:1vh 1vw;
+    text-align: center;
+  }
+  .logo img {
+    height: 3rem;
+    width: 8rem;
+   padding: 20px 20px 20px 20px;
+  }
+  
+  /*Styling Links*/
+  .nav-links{
+    display: flex;
+    list-style: none; 
+    width: 44vw;
+    margin-left: 45%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .nav-links li a{
+    text-decoration: none;
+    margin: 0 0.7vw;
+  }
+  .nav-links li a:hover {
+    color: #61DAFB;
+  }
+  .nav-links li {
+    position: relative;
+  }
+  .nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #61DAFB;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+  }
+  .nav-links li a:hover::before{
+    width: 80%;
+  }
+  
+  
+  /*Styling Hamburger Icon*/
+  .hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .hamburger{
+    display: none;
+  }
+  h1{
+    font-family: 'Cinzel', serif;
+    font-size:6vw;
+    color:aqua;
+    margin-left: 10%;
+    margin-top: 20%;
+  }
+  h2{
+    font-family: 'VT323', monospace;
+    font-size:3.5vw;
+    color: aqua;
+    margin-left: 10%;
+    margin-top: 2%;
+  
+  }
+  .content-right{
+    width: 60%;
+    height: 40%;
+  }
+  #main-content{
+    display: flex;
+  }
+  .img{
+    width:75%;
+    height:80%;
+    margin-left: 22%;
+    margin-top: 20%;
+  }
+  .video-player{
+  width: 0%;
+  height: 0vh;
+  position: absolute;
+  left:50%;
+  top:40%;
+  transform:translate(-50%,-70%);
+  transform-origin: center center;
+  }
+  video{
+  width:90%;
+  padding-top: 20px;
+  margin: auto;
+  display: block;
+  position: relative;
+  }
+  #close{
+  position: relative;
+  top:0px;
+  right: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  display: none;
+  }
+  .demo{
+    color:rgb(244, 241, 241);
+    width: 100px;
+    height: 50px;
+    background: url(./Rectangle\ 1\ copy\ 4.png);
+    border: 1px solid rgba(9, 0, 81, 0.92);
+  }
+  .toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+  }
+  .toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+  }
+  .toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+  }
+  /*Stying for small screens*/
+  @media screen and (max-width: 800px){
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: #61667a;
+        height: 60vh;
+        width: 67%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    li.fade{
+        opacity: 1;
+    }
+  }
+  
+  /*media query for all element*/
+  @media screen and (max-width: 420px){
+    #main-content{
+      display: flex;
+      flex-direction: column;
+  
+    }
+  .content-right{
+    position: fixed;
+    justify-content:center;
+    margin-top: 15%;
+    margin-left: 10%;
+    padding: 10px 10px 10px 10px;
+  }
+  h1{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 40px;
+  
+  }
+  h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+  }
+  .content-left{
+  width: 100%;
+  }
+  .img{
+  margin-top:70%;
+  margin-right: 10%;
+  }
+  
+  }

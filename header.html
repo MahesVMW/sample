@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./header">
+    <title>Responsive Animated Navbar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Acme&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="homepage">
+        <nav>
+            <div class="logo">
+                <img src="./Sparx.png" alt="Logo Image" width="300px" height="100px">
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><button  class="demo" id="demo"><i class="bi bi-play-circle" style="color: rgb(7, 176, 243);"></i>Live Demo</button></li>
+                <li><button  class="demo" onclick="openForm()"><i class="bi bi-currency-dollar" style="color: rgb(7, 176, 243);"></i>Get Quote</button></li>
+                <li><a href="./Offer Letter_Prolaborate_Maheshwaran Veerakumar (1)_copy.pdf" download><button  class="demo"><i class="bi bi-download"></i>Download</button></a></li>
+            </ul>
+        </nav>
+        <div  id="myForm">
+            <form action="#0" onsubmit="return setAction(this)" class="form-container">
+                  <h3>LOGIN</h3>
+                 <label class="lastbox">
+                    <input type="text" id="lastname"  placeholder="Enter your name">
+                    <span class="lasttext"></span>
+                 </label>
+                  <label class="emailbox">
+                     <input type="email" id="email"   placeholder="Enter your Email">
+                     <span class="emailtext"></span>
+                  </label>
+                  <label class="passbox">
+                     <input type="password" id="password"  placeholder="Enter your password">
+                     <span class="passtext"></span>
+                  </label>
+                  <button type="submit" class="btn">SUBMIT</button><br>
+                  <button type="button" class="btn cancel" id="btn2" onclick="closeForm()">CLOSE</button>
+                  <div class="container">
+               <div class="popup" id="popup">
+               <img src="./check.jpeg">
+               <h2>Welcome Back!</h2>
+               <p>Logged in successfully</p>
+               <button type="button" onclick="closepopup()">OK</button>
+               </div>
+                  </div>
+             
+              
+              </form>
+            </div>
+</body>
+</html>

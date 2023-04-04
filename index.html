@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <section id="header">
+        <div class="left">
+            <a href=""><img src="./sparx logo.png" width="130px;" height="50px;"></a> 
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+     <div class="right">
+        <ul>
+          <li><a href="" class="demo" id="demo" style="color:rgb(244, 241, 241)"><i class="bi bi-play-circle" style="color: rgb(7, 176, 243);"></i>Live Demo</a></li>
+            <li><a href="" style="color:rgb(244, 241, 241)"><i class="bi bi-currency-dollar" style="color: rgb(7, 176, 243);"></i>Get Quote</a></li>
+            <li class="down"><a href="" style="color:rgb(71, 160, 216)"><i class="bi bi-download"></i>Download</a></li>
+        </ul>
+          
+     </div>
+       </section>
+       <section id="main-content">
+        <div class="content-right">
+            <h1>Secure Password</h1>
+            <h2>For a more secure environment</h2>
+        </div>
+        <div class="content-left">
+          <img src="./Layer 5.png" class="img">
+        </div>
+        
+       </section>
+       <div class="video-player" id="video_player">
+        <video width="100%" controls autoplay>
+           <source src="./sparx video.mp4" type="video/mp4">
+        </video>
+        <div id="close">close</div>
+       </div>
+       <script>
+        let closevideo = document.getElementById('close');
+let openvideo =   document.getElementById('demo');
+let myvideo = document.getElementById('video_player');
+openvideo.addEventListener('click',() =>{
+    myvideo.setAttribute("style","width:90%;height:50vh;transition:all .5s linear");
+    closevideo.style.display = "block"
+})
+closevideo.addEventListener('click',() =>{
+    myvideo.setAttribute("style","width:0%;height:0vh;transition:all .5s linear");
+    closevideo.style.display = "none"
+})
+       </script>
+</body>
+</html>
