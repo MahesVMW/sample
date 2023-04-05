@@ -1,0 +1,40 @@
+
+form{
+  position: relative;
+  width:300px;
+  margin-left: 40%;
+}
+.form-container{
+border-radius: 5px;
+  width:300px;
+  height:330px;
+  background:url(./background8.png);
+  padding:10px 10px 10px 10px;
+  border: 1px solid rgb(245, 241, 241);
+  box-shadow: 2px 0 2px 0 rgb(163, 161, 161);
+}
+form label{
+  position: relative; 
+  display: block;
+ }
+ form input{
+   margin:15px 0;
+   width:60%;
+   background:#b9b5b5;
+   color:#fff;
+   padding:10px;
+   border-radius: 6px;
+   font-size: 18px;
+   border: none;
+   outline: none;
+ }
+ form input:hover{
+   cursor:pointer;
+   background-color:#b6e2f7 ;
+ }
+
+
+
+.hideform {
+  display: none;
+}

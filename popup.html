@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./popup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    
+        <form id="myForm" class="center hideform">
+            <label class="emailbox">
+                <input type="email" id="email"   placeholder="Enter your Email">
+                <span class="emailtext"></span>
+                <p id="error"></p>
+             </label>
+             <label class="passbox">
+                <input type="password" id="password"  placeholder="Enter your password">
+                <span class="passtext"></span>
+                <p id="error1"></p>
+                <span class="text4"></span>
+             </label>
+             <button type="button" id="close" style="float:left;" onclick="closeForm()">CLOSE</button>
+        </form>
+    <button id="show">Show form</button>
+    <script>
+        $('#show').on('click', function () {
+    $('.center').show();
+    $(this).hide();
+})
+
+$('#close').on('click', function () {
+    $('.center').hide();
+    $('#show').show();
+})
+//open//
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+    </script>
+</body>
+</html>
