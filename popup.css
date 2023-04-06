@@ -1,0 +1,174 @@
+h3{
+  font-size: 25px;
+  color:#01080d;
+  font-weight: bolder;
+  text-align: center;
+}
+/* form{
+  position: relative;
+  width:330px;
+  height:420px;
+  margin-left: 40%;
+  background-color:#4a4c4d;
+  background:url(./Rectangle\ 1\ copy\ 4.png);
+  padding:10px 10px 10px 10px;
+  border: 1px solid rgb(245, 241, 241);
+  box-shadow: 2px 0 2px 0 rgb(163, 161, 161);
+} */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 410px;
+  text-align: center;
+  background-color: #e8eae6;
+  box-sizing: border-box;
+  padding: 10px;
+  z-index: 100;
+  display: none;
+  border-radius: 10px;
+  /*to hide popup initially*/
+}
+/* .content:hover{
+  width: 300px;
+  height: 460px;
+} */
+form label{
+  position: relative; 
+  display: block;
+ }
+ form input{
+   margin:10px 0;
+   width:90%;
+   margin-left: 20px;
+   background:#b9b5b5;
+   color:#fff;
+   padding:8px;
+   border-radius: 6px;
+   font-size: 15px;
+   border: none;
+   outline: none;
+ }
+ form input:hover{
+   cursor:pointer;
+   background-color:#b6e2f7 ;
+ }
+ .emailtext,
+.passtext{
+  font-size: 12px;
+  font-weight: 280;
+  font-style:italic;
+  padding:5px; 
+}
+label.valid.emailtext,
+label.valid.passtext{
+  color:#0d8d0d;
+}
+label.invalid.emailtext,
+label.invalid.passtext{
+  color:#f00;
+}
+label.valid::before,
+label.invalid::before{
+  content:"";
+  position: absolute;
+  width:24px;
+  height:24px;
+  top:24px;
+  right:20px;
+  z-index:100;
+}
+label.valid::before{
+  background: url(./check.jpeg)no-repeat center /cover;
+}
+label.invalid::before{
+  background: url(./error.jpeg)no-repeat center /cover;
+}
+.container{
+  width:100%;
+  height:5%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.btn{
+  margin-top: 45px;
+  padding: 10px 50px;
+  background: #b9b5b5;
+  border:0;
+  outline: none;
+  cursor:pointer;
+  font-size: 14px;
+  font-family:'Times New Roman', Times, serif;
+  font-weight:bolder;
+  border-radius:5px;
+
+}
+.btn:hover{
+  cursor: pointer;
+  background-color: #b6e2f7;
+}
+#close{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 4px;
+}
+#close:hover{
+  cursor: pointer;
+  background-color: #b6e2f7;
+}
+.popup{
+  width:400px;
+  background: #fff;
+  border-radius: 6px;
+  position:absolute;
+  top:0;
+  left:50%;
+  transform: translate(-50%,-50%)scale(0.1);
+  text-align: center;
+  padding:0 30px 30px;
+  color:#333;
+  visibility: hidden;
+  transition: transform 0.4s,top 0.4s;
+}
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%,-50%)scale(1);
+}
+.popup img{
+  width:100px;
+  margin-top:-50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.popup h2{
+  font-size: 38px;
+  font-weight: 500;
+  margin:30px 0 10px;
+}
+.popup button{
+  width:100%;
+  margin-top: 50px;
+  padding:10px 0;
+  background: #6fd649;
+  color:#fff;
+  border:0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+
+
+.hideform {
+  display: none;
+}
