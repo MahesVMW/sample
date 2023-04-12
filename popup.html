@@ -1,0 +1,408 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./popup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Acme&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./Sparx.png" alt="Logo Image" width="300px" height="100px">
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><button  class="demo" id="demo"><i class="bi bi-play-circle" style="color: rgb(7, 176, 243);"></i>Live Demo</button></li>
+            <li><button  class="demo" onclick="return togglePopup()"><i class="bi bi-currency-dollar" style="color: rgb(7, 176, 243);"></i>Get Quote</button></li>
+            <li><a href="./Offer Letter_Prolaborate_Maheshwaran Veerakumar (1)_copy.pdf" download><button  class="demo"><i class="bi bi-download"></i>Download</button></a></li>
+        </ul>
+    </nav>
+    <section id="main-content">
+        <div class="content-left">
+            <h1>Secure Password</h1>
+            <h2>For a more secure environment</h2>
+        </div>
+        <div class="content-right">
+          <img src="./New Project.png" class="img">
+        </div>
+        
+       </section>
+       <div class="video-player" id="video_player">
+        <video width="100%" controls autoplay>
+           <source src="./sparx video.mp4" type="video/mp4">
+        </video>
+        <div id="close">close</div>
+       </div>
+    <div class="content">
+        <form action="#" id="myForm">
+                <h3>LOGIN</h3>
+                <label class="namebox">
+                    <input type="text" id="name"   placeholder="Enter your name">
+                    <span class="nametext"></span>
+                    <p id="error"></p>
+                 </label>
+                <label class="emailbox">
+                    <input type="email" id="email"   placeholder="Enter your Email">
+                    <span class="emailtext"></span>
+                    <p id="error"></p>
+                 </label>
+                 <label class="passbox">
+                    <input type="password" id="password"  placeholder="Enter your password">
+                    <span class="passtext"></span>
+                    <p id="error1"></p>
+                    <span class="text4"></span>
+                 </label>
+                    <button type="submit" id="button" class="btn" onclick="validate()" >SUBMIT</button>
+                    <div class="popup" id="popup">
+                    <img src="./check.jpeg">
+                    <h2>Welcome Back!</h2>
+                    <p>Logged in successfully</p>
+                    <button type="button" onclick="closepopup()">OK</button>
+                    </div>
+                 <button type="button" id="close1" style="float:left;" onclick="togglePopup()">X</button>
+         
+        </form>
+    </div>
+    <section id="policies">
+        <h3>The need for stringent sparxs password policies</h3>
+    <div class="container">
+          <div class="left-policy">
+            <h4>Sparx password policy requirements</h4>
+             <img src="./Layer 26.png">
+                <div class="centered"><i class="bi bi-person-fill-lock" style="color: rgb(131, 199, 226);"></i>Maximum password age</div>
+                <div class="right-centered"><i class="bi bi-globe" style="color: rgb(131, 199, 226);"></i>Password complexity requirements</div>
+                <div class="bottom-left"><i class="bi bi-file-earmark-text" style="color: rgb(131, 199, 226);"></i>Password history enforcement</div>
+                <div class="top-left"><i class="bi bi-building-fill-lock" style="color: rgb(131, 199, 226);"></i>Minimum password length</div>
+                <div class="top-right"><i class="bi bi-alarm" style="color: rgb(131, 199, 226);"></i>Minimum password age</div>
+                <div class="bottom-right"><i class="bi bi-file-earmark-spreadsheet-fill" style="color: rgb(131, 199, 226);"></i>Reversible encryption for storing passwords</div>
+             </div>
+                
+          <div class="right-policy">
+            <h4>Why sparx password policies aren't enough.</h4>
+           <p class="first-class"> <i class="bi bi-check2" style="color: brown;"></i> The password policies cannot be applied to specific OUs</p>
+           <p  class="second-class"><i class="bi bi-check2" style="color: brown;"></i>>Dictionary words,patterns and palindromes cannot be
+
+            restricted</p>
+            <p class="second-class"><i class="bi bi-check2" style="color: brown;"></i>consecutive reputation of the same charecter cannot be prevented</p>
+            <p class="second-class"><i class="bi bi-check2" style="color: brown;"></i>resets by adminsin the Users and Computers(ADUC)
+
+                console.</p>
+                <p class="second-class"><i class="bi bi-check2" style="color: brown;"></i>The password must meet complexity requirements policy
+
+                    setting cannot mandate the number of charecters from a
+                    
+                    certain charecter type.
+                    </p>
+          </div>
+    </div>
+    </section>
+    <section id="banner">
+        <div class="left-banner">
+            <p class="para"><span id="blue">Research says</span><br><span id="red">99% of password breaches  </span><br>are stolen or weak passwords.</p>
+            <button class="download">Download now</button>
+        </div>
+        <div class="right-banner">
+           <img src="./Vector Smart Object.png">
+        </div>
+    </section>
+    <div id="text">
+        <h3>Say goodbye to memorizing passwords.</h3>
+        <p>Let us do it for you.Zoho Vault is a secure password manager that safely manages your passwords <br> and autofills them across websites and applications.</p>
+     </div>
+   <!-- <section id="last-page"> -->
+    <div id="seven">
+        <div class="row_1">    
+            <!-- try -->
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="./password1.jpg" style="width:100%">
+                  
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="./password2.jpg" style="width:100%">
+                  
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="./password3.png" style="width:100%">
+                    
+                </div>
+                <div id="mySlides_text">
+                    <h3 id="mySlides_text1">Restrict character</h3>
+                    <p id="mySlides_text2">A secure password management experience for teams of all teams</p>
+
+                </div>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
+                
+            <!-- / -->
+        </div>
+        <div class="row_2">
+            <div id="last">
+                <img src="./Layer 11.png" alt="" class="last_pic1">
+                <img src="./Layer 12.png" alt="" class="last_pic2">
+               
+            </div>
+        </div>
+    </div> 
+    <div id="copyright">
+        <p id="copyright1">Thank you for exploring here</p>
+    </div>  
+    <script>
+        //slideshow//
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+        //video player//
+        let closevideo = document.getElementById('close');
+let openvideo =   document.getElementById('demo');
+let myvideo = document.getElementById('video_player');
+openvideo.addEventListener('click',() =>{
+    myvideo.setAttribute("style","width:70%;height:40vh;transition:all .5s linear");
+    closevideo.style.display = "block"
+})
+closevideo.addEventListener('click',() =>{
+    myvideo.setAttribute("style","width:0%;height:0vh;transition:all .5s linear");
+    closevideo.style.display = "none"
+})
+        //hamburger icon//
+        const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+hamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //Hamburger Animation
+    hamburger.classList.toggle("toggle");
+});
+//toggle popup//
+       function togglePopup() {
+            $(".content").toggle();
+        }
+//close//
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+// //form validation//
+// const email = document.getElementById("email");
+//      const password = document.getElementById("password");
+//      const name = document.getElementById("name");
+//      name.addEventListener('input',()=>{
+//          const namebox = document.querySelector('.namebox');
+//          const nametext = document.querySelector('.nametext');
+//          const namepattern = /^[a-zA-Z].{6,}/;
+     
+//          if(name.value.match(namepattern,)){
+//             namebox.classList.add('valid');
+//             namebox.classList.remove('invalid');
+//             nametext.innerHTML = "your name is valid";
+//             document.getElementById('button').disabled =false; 
+//             // satisfy=satisfy+1;
+             
+//          }else{
+//             namebox.classList.add('invalid');
+//             namebox.classList.remove('valid');
+//             nametext.innerHTML = "please enter a valid name";
+//              document.getElementById('button').disabled = true; 
+//          }
+//      });
+     
+
+//      email.addEventListener('input',()=>{
+//          const emailbox = document.querySelector('.emailbox');
+//          const emailtext = document.querySelector('.emailtext');
+//          const emailpattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
+     
+//          if(email.value.match(emailpattern,)){
+//              emailbox.classList.add('valid');
+//              emailbox.classList.remove('invalid');
+//              emailtext.innerHTML = "your email address is valid";
+//              document.getElementById('button').disabled =false; 
+//             // satisfy=satisfy+1;
+             
+//          }else{
+//              emailbox.classList.add('invalid');
+//              emailbox.classList.remove('valid');
+//              emailtext.innerHTML = "please enter a valid email";
+//              document.getElementById('button').disabled = true; 
+//          }
+//      });
+     
+//      password.addEventListener('input',()=>{
+//          const passbox = document.querySelector('.passbox');
+//          const passtext = document.querySelector('.passtext');
+//          const passpattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+     
+//          if(password.value.match(passpattern)){
+//              passbox.classList.add('valid');
+//              passbox.classList.remove('invalid');
+//              passtext.innerHTML = "your password is valid";
+//              document.getElementById('button').disabled =false; 
+//             // satisfy=satisfy+1;
+             
+//          }else{
+//              passbox.classList.add('invalid');
+//              passbox.classList.remove('valid');
+//              passtext.innerHTML = "Your password must be atleast 6 characters as well as contain at least one uppercase,one lowercase, and one number.";
+//              document.getElementById('button').disabled = true; 
+//             }
+//      });
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const name = document.getElementById("name");
+     function check_name(){
+        const namebox = document.querySelector('.namebox');
+         const nametext = document.querySelector('.nametext');
+         const namepattern = /^[a-zA-Z].{6,}/;
+     
+         if(name.value.match(namepattern,)){
+            namebox.classList.add('valid');
+            namebox.classList.remove('invalid');
+            nametext.innerHTML = "your name is valid";
+            document.getElementById("name").style.border = "1.5px solid green";
+            // document.getElementById('button').disabled =false; 
+            // satisfy=satisfy+1;
+             
+         }else{
+            namebox.classList.add('invalid');
+            namebox.classList.remove('valid');
+            nametext.innerHTML = "please enter a valid name";
+            document.getElementById("name").style.border = "1.5px solid red";
+            //  document.getElementById('button').disabled = true; 
+            error_name = true;
+         }
+     }
+     function check_email(){
+    //     
+         const emailbox = document.querySelector('.emailbox');
+         const emailtext = document.querySelector('.emailtext');
+         const emailpattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
+     
+         if(email.value.match(emailpattern)){
+             emailbox.classList.add('valid');
+             emailbox.classList.remove('invalid');
+             emailtext.innerHTML = "your email address is valid";
+           document.getElementById("email").style.border = "1.5px solid green";
+            // satisfy=satisfy+1;
+             
+         }else{
+             emailbox.classList.add('invalid');
+             emailbox.classList.remove('valid');
+             emailtext.innerHTML = "please enter a valid email";
+             error_email = true;   
+             document.getElementById("email").style.border = "1.5px solid red";
+        }
+    
+  
+    }
+     function check_password(){
+        
+         const passbox = document.querySelector('.passbox');
+         const passtext = document.querySelector('.passtext');
+         const passpattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+     
+         if(password.value.match(passpattern)){
+             passbox.classList.add('valid');
+             passbox.classList.remove('invalid');
+             passtext.innerHTML = "your password is valid";
+             document.getElementById("password").style.border = "1.5px solid green";
+            // satisfy=satisfy+1;
+             
+         }else{
+             passbox.classList.add('invalid');
+             passbox.classList.remove('valid');
+             passtext.innerHTML = "Your password must be atleast 6 characters as well as contain at least one uppercase,one lowercase, and one number.";
+             error_password= true;
+             document.getElementById("password").style.border = "1.5px solid red";
+
+            }
+
+     
+     }
+    
+    //  //welcome message//
+    //  let popup = document.getElementById("popup");
+    //  function openpopup(){
+    //     popup.classList.add("open-popup");
+    //  }
+    //  function closepopup(){
+    //     popup.classList.remove("open-popup");
+    //  }
+ 
+function validate(){
+    error_email = false;
+    error_password = false; 
+    error_name = false
+    check_email();
+     check_password();
+     check_name();
+     if ( error_email === false && error_password === false && error_name === false){
+  
+        return openpopup();
+         }
+         else{
+            return false;
+         }
+
+}
+   
+    
+
+
+
+
+
+     
+     //welcome message//
+     let popup = document.getElementById("popup");
+     function openpopup(){
+        popup.classList.add("open-popup");
+     }
+     function closepopup(){
+        popup.classList.remove("open-popup");
+     }
+    </script>
+</body>
+</html>
